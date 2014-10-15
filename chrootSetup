@@ -1,0 +1,30 @@
+Needed:
+	bin/bash
+	dev/null   (mknod -m 666 null c 1 3)
+	etc/group  (restrict to chroot group)
+	etc/hosts
+	etc/ld.so.cache
+	etc/ld.so.conf
+	etc/nsswitch.conf
+	etc/passwd     (restrict to only user in chroot)
+	lib/
+	lib64/
+	usr/bin/scp
+	usr/bin/sftp
+	usr/lib
+
+0. Create user: adduser <someuser>
+
+1. Modify /etc/ssh/sshd_config
+		Match group <chroot group>
+				ChrootDirectory /var/chroot
+
+2. service ssh restart
+
+
+
+
+
+
+
+
