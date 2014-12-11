@@ -1,0 +1,15 @@
+git push origin master
+git pull origin master
+
+git add <file>
+git commit -m "some message"
+
+
+// add file undo add for commit
+git reset <file>
+
+// remove changes (have to un-add first)
+git checkout <file>
+
+// undo everything
+git reset --hard
